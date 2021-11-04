@@ -1,0 +1,42 @@
+﻿@model WebProductView.Models.Product
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Product - <small>ID: @Html.DisplayFor(model => model.Id) | CODE: @Html.DisplayFor(model => model.productCode)</small></h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.description)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.description)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.features)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.features)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.stock)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.stock)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.image)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.image)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+    <a asp-action="Index">Back to Products List</a>
+</div>
